@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm2u7iamddox5"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ss00v"]
+[ext_resource type="Texture2D" uid="uid://wkch8i8q5mpb" path="res://asets/off-retrospective-8.jpg" id="2_12nlp"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ss00v")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.35529, 1.35282)
+texture = ExtResource("2_12nlp")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.427
+anchor_top = 0.881
+anchor_right = 0.427
+anchor_bottom = 0.881
+offset_left = -23.904
+offset_top = -71.888
+offset_right = 53.096
+offset_bottom = -5.888
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="begin" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Comezar"
+
+[node name="quit" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Saír"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/begin" to="." method="_on_begin_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
