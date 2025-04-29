@@ -2,14 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
 
     <EditText
         android:id="@+id/rnome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="text"
         android:text="Nome"
@@ -18,10 +20,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/lemail"
+        android:id="@+id/remail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Email"
@@ -30,41 +32,41 @@
         app:layout_constraintTop_toBottomOf="@+id/rnome" />
 
     <EditText
-        android:id="@+id/lpassword"
+        android:id="@+id/rpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="text"
         android:text="Contrasinal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lemail" />
+        app:layout_constraintTop_toBottomOf="@+id/remail" />
 
     <EditText
         android:id="@+id/rpassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="text"
         android:text="Repite a contrasinal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/rpassword" />
 
     <Button
-        android:id="@+id/rsession"
+        android:id="@+id/rlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="255dp"
+        android:layout_marginStart="150dp"
         android:layout_marginTop="15dp"
         android:text="Iniciar sesion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rpassword2" />
 
     <Button
-        android:id="@+id/llogin"
+        android:id="@+id/rregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"

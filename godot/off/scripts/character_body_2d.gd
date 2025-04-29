@@ -12,18 +12,22 @@ func _physics_process(delta):
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("ui_right"):
-		_animated_sprite.play("right")
-	else:
-		_animated_sprite.stop()
+	if Input.is_action_pressed("ui_down"):
+		_animated_sprite.play("down")
+	elif Input.is_action_just_released("ui_down"):
+		_animated_sprite.play("d_down")
+	
+	if Input.is_action_pressed("ui_up"):
+		_animated_sprite.play("up")
+	elif Input.is_action_just_released("ui_up"):
+		_animated_sprite.play("d_up")
 		
 	if Input.is_action_pressed("ui_left"):
 		_animated_sprite.play("left")
-	else:
-		_animated_sprite.stop()
-	if Input.is_action_pressed("ui_up"):
-		_animated_sprite.play("up")
-	else:
-		_animated_sprite.stop()
-	if Input.is_action_pressed("ui_down"):
-		_animated_sprite.play("down")
+	elif Input.is_action_just_released("ui_left"):
+		_animated_sprite.play("d_left")
+		
+	if Input.is_action_pressed("ui_right"):
+		_animated_sprite.play("right")
+	elif Input.is_action_just_released("ui_right"):
+		_animated_sprite.play("d_right")

@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfqfi7l13bpbw"]
+
+[ext_resource type="Script" path="res://scripts/combat.gd" id="1_2p7ym"]
+[ext_resource type="Texture2D" uid="uid://bf2omuh0qsd4v" path="res://asets/18870g3.png" id="1_3q8jl"]
+[ext_resource type="Texture2D" uid="uid://cbt7bmq6unjlv" path="res://asets/59520.png" id="2_wphtt"]
+[ext_resource type="Texture2D" uid="uid://cea6r6sna7mrl" path="res://asets/595181.png" id="3_eoacn"]
+
+[node name="combat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2p7ym")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_3q8jl")
+
+[node name="595181" type="Sprite2D" parent="."]
+position = Vector2(202.001, 235)
+scale = Vector2(3.61128, 2.7)
+texture = ExtResource("3_eoacn")
+
+[node name="59520" type="Sprite2D" parent="."]
+position = Vector2(1006.02, 392.45)
+scale = Vector2(3.22027, 2.86851)
+texture = ExtResource("2_wphtt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 328.0
+offset_top = 146.0
+offset_right = 529.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="VBoxContainer/ProgressBar"]
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 24.0
+text = "50/100"
+horizontal_alignment = 1
+
+[node name="atk" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Atacar"
+
+[node name="scp" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Fuxir"
+
+[connection signal="value_changed" from="VBoxContainer/ProgressBar" to="." method="_on_progress_bar_value_changed"]
+[connection signal="pressed" from="VBoxContainer/atk" to="." method="_on_atk_pressed"]
+[connection signal="pressed" from="VBoxContainer/scp" to="." method="_on_scp_pressed"]
