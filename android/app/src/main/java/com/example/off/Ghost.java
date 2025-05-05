@@ -1,14 +1,17 @@
 package com.example.off;
+
+import android.graphics.drawable.Drawable;
+
 public class Ghost {
-    private String name;
-    private String img;
+    private static String name;
+    private static int img;
     private int hp;
     private int atk;
     private int def;
     private int esp;
     private int agl;
 
-    public Ghost(String name, String img, int hp, int atk, int def, int esp, int agl){
+    public Ghost(String name, int img, int hp, int atk, int def, int esp, int agl){
         this.name=name;
         this.img=img;
         this.hp=hp;
@@ -17,14 +20,12 @@ public class Ghost {
         this.esp=esp;
         this.agl=agl;
     }
-    public String getName() {
+    public static String getName() {
         return name;
     }
-
-    public String getImg() {
+    public static int getImg() {
         return img;
     }
-
     public int getHp() {
         return hp;
     }
