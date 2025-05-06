@@ -3,9 +3,16 @@ extends Control
 
 signal textbox_closed
 
-# Called when the node enters the scene tree for the first time.
+#export(Resource) var enemy = null
+var current_player_hp = 0
+var current_enemy_hp = 0
 func _ready() -> void:
-	set_health($Player/ProgressBar, State.hp, State.max_hp)
+	set_health($Player/player_bar, State.hp, State.max_hp)
+	#set_health($enemy_bar, enemy.hp, enemy.hp)
+	#$"enemy_sprite".texture = enemy.texture
+	#current_enemy_hp = enemy.hp
+	current_player_hp = State.hp
+	
 	$TextPanel.hide()
 	display_text("Un fantasma apareceu!")
 	
@@ -28,8 +35,22 @@ func set_health(progress_bar, hp, max_hp):
 
 
 func _on_atk_pressed() -> void:
-	pass # Replace with function body.
+	display_text("Atacaches!")
+	await (textbox_closed)
+	
+	#current_enemy_hp = max(0, current_enemy_hp - State.atk)
+	#set_health($enemy_bar, current_enemy_hp, enemy.hp)
+	
+	$AnimationPlayer.play("enemy")
+	enemy_turn()
 
+func enemy_turn() -> void:
+	display_text("O enemigo ataca!")
+	await (textbox_closed)
+	
+	#current_player_hp = max(0, current_player_hp - enemy.atk)
+	set_health($Player/player_bar, current_player_hp, State.max_hp)
+	$AnimationPlayer.play("player_hit")
 
 func _on_scp_pressed() -> void:
 	display_text("Escapaches!")

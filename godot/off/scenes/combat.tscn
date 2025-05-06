@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfqfi7l13bpbw"]
+[gd_scene load_steps=10 format=3 uid="uid://cfqfi7l13bpbw"]
 
 [ext_resource type="Script" path="res://scripts/combat.gd" id="1_2p7ym"]
 [ext_resource type="Texture2D" uid="uid://bf2omuh0qsd4v" path="res://asets/18870g3.png" id="1_3q8jl"]
@@ -12,6 +12,70 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_mbrn6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player_sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_colfc"]
+resource_name = "enemy"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemy_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ugbse"]
+resource_name = "player_hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4b3os"]
+_data = {
+"RESET": SubResource("Animation_mbrn6"),
+"enemy": SubResource("Animation_colfc"),
+"player_hit": SubResource("Animation_ugbse")
+}
 
 [node name="combat" type="Control"]
 layout_mode = 3
@@ -28,12 +92,18 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_3q8jl")
 
-[node name="595181" type="Sprite2D" parent="."]
+[node name="enemy_sprite" type="Sprite2D" parent="."]
 position = Vector2(202.001, 235)
 scale = Vector2(3.61128, 2.7)
 texture = ExtResource("3_eoacn")
 
-[node name="59520" type="Sprite2D" parent="."]
+[node name="enemy_bar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+show_percentage = false
+
+[node name="player_sprite" type="Sprite2D" parent="."]
 position = Vector2(1006.02, 392.45)
 scale = Vector2(3.22027, 2.86851)
 texture = ExtResource("2_wphtt")
@@ -52,14 +122,14 @@ offset_bottom = 261.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="Player"]
+[node name="player_bar" type="ProgressBar" parent="Player"]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 max_value = 50.0
 value = 25.0
 show_percentage = false
 
-[node name="Label" type="Label" parent="Player/ProgressBar"]
+[node name="Label" type="Label" parent="Player/player_bar"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -97,6 +167,11 @@ offset_right = 185.0
 offset_bottom = 28.0
 text = "Un fantasma apareceu!"
 
-[connection signal="value_changed" from="Player/ProgressBar" to="." method="_on_progress_bar_value_changed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4b3os")
+}
+
+[connection signal="value_changed" from="Player/player_bar" to="." method="_on_progress_bar_value_changed"]
 [connection signal="pressed" from="Player/atk" to="." method="_on_atk_pressed"]
 [connection signal="pressed" from="Player/scp" to="." method="_on_scp_pressed"]
