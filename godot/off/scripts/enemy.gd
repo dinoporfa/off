@@ -1,9 +1,10 @@
+class_name enemy
 extends Resource
 
-export(String) var name = "Queimado"
-export(Texture) var texture = null
-export(int) var hp = 70
-export(int) var atk = 80
-export(int) var def = 70
-export(int) var esp = 70
-export(int) var agl = 40
+@export var name : String
+@export var texture : Texture
+@export var hp : int 
+@export var atk : int 
+@export var def : int 
+@export var esp : int 
+@export var agl : int 

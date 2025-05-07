@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="enemy" load_steps=3 format=3 uid="uid://x5jodxly8mhf"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_uo7ui"]
+[ext_resource type="Texture2D" uid="uid://b0mc27t24vtpo" path="res://asets/595183.png" id="2_ipssc"]
+
+[resource]
+script = ExtResource("1_uo7ui")
+name = "Queimado de calvario"
+texture = ExtResource("2_ipssc")
+hp = 150
+atk = 150
+def = 85
+esp = 80
+agl = 100

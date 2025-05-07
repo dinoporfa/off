@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/combat.gd" id="1_2p7ym"]
 [ext_resource type="Texture2D" uid="uid://bf2omuh0qsd4v" path="res://asets/18870g3.png" id="1_3q8jl"]
 [ext_resource type="Texture2D" uid="uid://cbt7bmq6unjlv" path="res://asets/59520.png" id="2_wphtt"]
-[ext_resource type="Texture2D" uid="uid://cea6r6sna7mrl" path="res://asets/595181.png" id="3_eoacn"]
+[ext_resource type="Texture2D" uid="uid://c3qwn6hpiph3b" path="res://asets/595185.png" id="3_o73nx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixen2"]
 bg_color = Color(0, 0, 0, 1)
@@ -93,9 +93,9 @@ offset_bottom = 648.0
 texture = ExtResource("1_3q8jl")
 
 [node name="enemy_sprite" type="Sprite2D" parent="."]
-position = Vector2(202.001, 235)
-scale = Vector2(3.61128, 2.7)
-texture = ExtResource("3_eoacn")
+position = Vector2(235.676, 218.975)
+scale = Vector2(4.10999, 3.09126)
+texture = ExtResource("3_o73nx")
 
 [node name="enemy_bar" type="ProgressBar" parent="."]
 layout_mode = 0

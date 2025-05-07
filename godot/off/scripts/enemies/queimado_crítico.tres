@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="enemy" load_steps=3 format=3 uid="uid://cgveqd5kv3t07"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_py76v"]
+[ext_resource type="Texture2D" uid="uid://cea6r6sna7mrl" path="res://asets/595181.png" id="2_ovs32"]
+
+[resource]
+script = ExtResource("1_py76v")
+name = "Queimado crítico"
+texture = ExtResource("2_ovs32")
+hp = 500
+atk = 10
+def = 10
+esp = 10
+agl = 250

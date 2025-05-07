@@ -1,5 +1,5 @@
 extends Node
 
-var hp=50
-var max_hp=50
+var hp=500
+var max_hp=500
 var atk=50

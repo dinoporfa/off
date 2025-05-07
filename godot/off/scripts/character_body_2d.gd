@@ -4,10 +4,23 @@ extends CharacterBody2D
 
 @export var speed = 100
 
+var step_size : int = 10
+
+var distance_in_pixel : float = 0.0:
+	set(value):
+		distance_in_pixel = value
+		var step = distance_in_pixel / step_size
+		%Distance.text = "%d" % step
+	
 
 func _physics_process(delta):
+	var initial_position = position
+	
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
+	
+	distance_in_pixel += position.distance_to(initial_position)
+	
 	move_and_slide()
 
 
@@ -31,3 +44,5 @@ func _process(delta: float) -> void:
 		_animated_sprite.play("right")
 	elif Input.is_action_just_released("ui_right"):
 		_animated_sprite.play("d_right")
+	
+	
