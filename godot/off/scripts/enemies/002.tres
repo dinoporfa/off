@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_py76v")
+id = 2
 name = "Queimado crítico"
 texture = ExtResource("2_ovs32")
 hp = 500

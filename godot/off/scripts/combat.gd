@@ -1,22 +1,23 @@
 extends Control
 
-
 signal textbox_closed
-
-@export var enemy : Resource
 
 var current_player_hp = 0
 var current_enemy_hp = 0
 
+@export var enemy: enemy = null:
+	set(value):
+		enemy = value
+
 func _ready() -> void:
 	set_health($Player/player_bar, State.hp, State.max_hp)
-	#set_enemy_health($enemy_bar, enemy.hp, enemy.hp)
-	#$"enemy_sprite".texture = enemy.texture
-	#current_enemy_hp = enemy.hp
+	set_enemy_health($enemy_bar, enemy.hp, enemy.hp)
+	$"enemy_sprite".texture = enemy.texture
+	current_enemy_hp = enemy.hp
 	current_player_hp = State.hp
 	
 	$TextPanel.hide()
-	#display_text("Un %s apareceu!" %enemy.name)
+	display_text("Un %s apareceu!" %enemy.name)
 	
 	await (textbox_closed)
 
@@ -44,27 +45,35 @@ func _on_atk_pressed() -> void:
 	display_text("Atacaches!")
 	await (textbox_closed)
 	
-	#current_enemy_hp = max(0, current_enemy_hp - State.atk)
-	#set_enemy_health($enemy_bar, current_enemy_hp, enemy.hp)
+	current_enemy_hp = max(0, current_enemy_hp - State.atk)
+	set_enemy_health($enemy_bar, current_enemy_hp, enemy.hp)
 	
 	display_text("Fixeches %d puntos de dano!" % State.atk)
 	await (textbox_closed)
 	
 	$AnimationPlayer.play("enemy")
+	
+	if current_enemy_hp<=0:
+		display_text("%s enimigo purificado!" % enemy.name)
+		await (textbox_closed)
+		get_tree().change_scene_to_file("res://scenes/game.tscn")
+	
 	enemy_turn()
 
 func enemy_turn() -> void:
-	#display_text("O %s ataca!" % enemy.name)
-	#await (textbox_closed)
+	display_text("O %s ataca!" % enemy.name)
+	await (textbox_closed)
 	
-	#current_player_hp = max(0, current_player_hp - enemy.atk)
+	current_player_hp = max(0, current_player_hp - enemy.atk)
 	set_health($Player/player_bar, current_player_hp, State.max_hp)
+	
 	$AnimationPlayer.play("player_hit")
-	#display_text("Recibiches %d puntos de dano!" % enemy.atk)
-	#await (textbox_closed)
+	
+	display_text("Recibiches %d puntos de dano!" % enemy.atk)
+	await (textbox_closed)
 	
 	if current_player_hp<=0:
-		get_tree().change_scene("res://scripts/game_over.gd")
+		get_tree().change_scene_to_file("res://scripts/game_over.gd")
 
 
 func _on_scp_pressed() -> void:
