@@ -16,7 +16,7 @@ func save_player_data(player):
 	last_position = player.position
 
 func get_enemy() ->enemy:
-	var chosen_enemy 
+	var chosen_enemy = "res://scripts/enemies/00" + str(randi_range(0, 2)) + ".tres"
 	
 	return chosen_enemy
 

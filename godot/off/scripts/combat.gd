@@ -48,14 +48,17 @@ func _on_atk_pressed() -> void:
 	current_enemy_hp = max(0, current_enemy_hp - State.atk)
 	set_enemy_health($enemy_bar, current_enemy_hp, enemy.hp)
 	
+	
+	$AnimationPlayer.play("enemy")
 	display_text("Fixeches %d puntos de dano!" % State.atk)
 	await (textbox_closed)
 	
-	$AnimationPlayer.play("enemy")
 	
 	if current_enemy_hp<=0:
 		display_text("%s enimigo purificado!" % enemy.name)
 		await (textbox_closed)
+		State.hp = current_player_hp
+		State.pts += enemy.pts
 		get_tree().change_scene_to_file("res://scenes/game.tscn")
 	
 	enemy_turn()
@@ -73,7 +76,7 @@ func enemy_turn() -> void:
 	await (textbox_closed)
 	
 	if current_player_hp<=0:
-		get_tree().change_scene_to_file("res://scripts/game_over.gd")
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 
 func _on_scp_pressed() -> void:

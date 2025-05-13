@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/combat.gd" id="1_2p7ym"]
 [ext_resource type="Texture2D" uid="uid://bf2omuh0qsd4v" path="res://asets/18870g3.png" id="1_3q8jl"]
-[ext_resource type="Resource" uid="uid://bntxt8vgdpmhv" path="res://scripts/enemies/000.tres" id="2_ruvfk"]
+[ext_resource type="Resource" uid="uid://x5jodxly8mhf" path="res://scripts/enemies/001.tres" id="2_6cbk4"]
 [ext_resource type="Texture2D" uid="uid://cbt7bmq6unjlv" path="res://asets/59520.png" id="2_wphtt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixen2"]
@@ -49,10 +49,10 @@ tracks/0/path = NodePath("enemy_sprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ugbse"]
@@ -64,10 +64,10 @@ tracks/0/path = NodePath("player_sprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4b3os"]
@@ -85,7 +85,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2p7ym")
-enemy = ExtResource("2_ruvfk")
+enemy = ExtResource("2_6cbk4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

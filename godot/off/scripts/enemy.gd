@@ -3,6 +3,7 @@ extends Resource
 
 @export var name : String
 @export var texture : Texture
+@export var pts : int
 @export var hp : int 
 @export var atk : int 
 @export var def : int 

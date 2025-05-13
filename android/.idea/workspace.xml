@@ -75,12 +75,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../godot/off/scenes/combat.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/combat.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/game.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/game_over.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/game_over.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../godot/off/scripts/State.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/State.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../godot/off/scripts/combat.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/combat.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/game.gd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/000.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/000.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemy.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemy.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/game_over.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/game_over.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/manager.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/manager.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
