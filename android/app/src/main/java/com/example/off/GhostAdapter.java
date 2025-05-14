@@ -13,14 +13,14 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.GhostViewHol
 
     private List<Ghost> ghostList;
 
-    public GhostAdapter(List<Ghost> examList) {
-        this.ghostList = examList;
+    public GhostAdapter(List<Ghost> ghostList) {
+        this.ghostList = ghostList;
     }
 
     @NonNull
     @Override
     public GhostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ghost_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ghost_item, parent, false);
         return new GhostViewHolder(view);
     }
 
@@ -28,8 +28,8 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.GhostViewHol
     public void onBindViewHolder(@NonNull GhostViewHolder holder, int position) {
         Ghost ghost = ghostList.get(position);
 
+        holder.image.setImage(Ghost.getImg());
         holder.name.setText(Ghost.getName());
-        holder.image.setImageResource(Ghost.getImg());
     }
 
     @Override

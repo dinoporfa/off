@@ -7,7 +7,7 @@
 script = ExtResource("1_uo7ui")
 name = "Queimado de calvario"
 texture = ExtResource("2_ipssc")
-pts = 500
+pts = 250
 hp = 150
 atk = 150
 def = 85

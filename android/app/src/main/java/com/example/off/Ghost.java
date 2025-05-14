@@ -1,19 +1,21 @@
 package com.example.off;
 
-import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
 
 public class Ghost {
     private static String name;
-    private static int img;
+    private static ImageView img;
+    private int pts;
     private int hp;
     private int atk;
     private int def;
     private int esp;
     private int agl;
 
-    public Ghost(String name, int img, int hp, int atk, int def, int esp, int agl){
+    public Ghost(String name, ImageView img, int pts, int hp, int atk, int def, int esp, int agl){
         this.name=name;
         this.img=img;
+        this.pts=pts;
         this.hp=hp;
         this.atk=atk;
         this.def=def;
@@ -23,8 +25,11 @@ public class Ghost {
     public static String getName() {
         return name;
     }
-    public static int getImg() {
+    public static ImageView getImg() {
         return img;
+    }
+    public int getPts(){
+        return pts;
     }
     public int getHp() {
         return hp;
