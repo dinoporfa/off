@@ -2,28 +2,17 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="_android_virtual_device_id_Nexus_S_API_28" />
+      </config>
     </shared>
     <layouts>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_batter.xml">
         <config>
-          <state>Landscape</state>
           <theme>@style/Theme.Off</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_mpage.xml">
-        <config>
-          <state>Landscape</state>
-          <theme>@style/Theme.Off</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_register.xml">
-        <config>
-          <state>Landscape</state>
-          <theme>@style/Theme.Off</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_data.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ghost.xml">
         <config>
           <theme>@style/Theme.Off</theme>
         </config>
@@ -43,27 +32,7 @@
           <theme>@style/Theme.Off</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml">
-        <config>
-          <theme>@style/Theme.Off</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml">
-        <config>
-          <theme>@style/Theme.Off</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/ghost_item.xml">
-        <config>
-          <theme>@style/Theme.Off</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml">
-        <config>
-          <theme>@style/Theme.Off</theme>
-        </config>
-      </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/ghost_card.xml">
         <config>
           <theme>@style/Theme.Off</theme>
         </config>
@@ -75,15 +44,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/BatterActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_batter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ghost.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/DataActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/DataActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/DataActivity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/Ghost.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/ui/dashboard/DashboardFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/ui/dashboard/DashboardFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ghost_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/ghost_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/MpageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/MpageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/ui/dashboard/DashboardFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/ui/dashboard/DashboardViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/ui/home/HomeFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/ui/home/HomeViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_mpage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout-land/activity_register.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mpage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mpage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/ghost_item.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +123,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/loisf/OneDrive/Escritorio/caca/MyApplication&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/loisf/OneDrive/Escritorio/recu/off/android&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
@@ -148,6 +135,12 @@
       <recent name="com.example.off" />
     </key>
     <key name="android.template.-499328987">
+      <recent name="com.example.off" />
+    </key>
+    <key name="android.template.-481404976">
+      <recent name="com.example.off" />
+    </key>
+    <key name="android.template.1280361580">
       <recent name="com.example.off" />
     </key>
   </component>
@@ -241,12 +234,12 @@
       <map>
         <entry key="com.example.off">
           <value>
-            <CheckInfo lastCheckTimestamp="1747215480028" />
+            <CheckInfo lastCheckTimestamp="1748108823209" />
           </value>
         </entry>
         <entry key="com.example.off.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1747215480028" />
+            <CheckInfo lastCheckTimestamp="1748108823210" />
           </value>
         </entry>
       </map>

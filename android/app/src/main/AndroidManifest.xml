@@ -13,9 +13,11 @@
         android:theme="@style/Theme.Off"
         tools:targetApi="31">
         <activity
-            android:name=".DataActivity"
-            android:exported="false"
-            android:label="@string/title_activity_data" />
+            android:name=".BatterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GhostActivity"
+            android:exported="false" />
         <activity
             android:name=".MpageActivity"
             android:exported="false" />

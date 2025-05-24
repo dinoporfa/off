@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
-public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.GhostViewHolder> {
 
+public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.MyViewHolder> {
     private List<Ghost> ghostList;
 
     public GhostAdapter(List<Ghost> ghostList) {
@@ -19,17 +19,18 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.GhostViewHol
 
     @NonNull
     @Override
-    public GhostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ghost_item, parent, false);
-        return new GhostViewHolder(view);
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.ghost_card, parent, false);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GhostViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Ghost ghost = ghostList.get(position);
 
-        holder.image.setImage(Ghost.getImg());
-        holder.name.setText(Ghost.getName());
+        holder.name.setText(ghost.getName());
+        holder.img.setImageResource(ghost.getImg());
     }
 
     @Override
@@ -37,16 +38,17 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.GhostViewHol
         return ghostList.size();
     }
 
-    static class GhostViewHolder extends RecyclerView.ViewHolder {
-        ImageView image;
+    static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name;
+        ImageView img;
 
-        public GhostViewHolder(@NonNull View itemView) {
+        public MyViewHolder(@NonNull View itemView) {
 
             super(itemView);
 
-            image = itemView.findViewById(R.id.image);
             name = itemView.findViewById(R.id.name);
+            img = itemView.findViewById(R.id.img);
+
         }
     }
 }

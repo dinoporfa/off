@@ -1,10 +1,8 @@
 package com.example.off;
 
-import android.widget.ImageView;
-
 public class Ghost {
-    private static String name;
-    private static ImageView img;
+    private String name;
+    private int img;
     private int pts;
     private int hp;
     private int atk;
@@ -12,7 +10,7 @@ public class Ghost {
     private int esp;
     private int agl;
 
-    public Ghost(String name, ImageView img, int pts, int hp, int atk, int def, int esp, int agl){
+    public Ghost(String name, int img, int pts, int hp, int atk, int def, int esp, int agl){
         this.name=name;
         this.img=img;
         this.pts=pts;
@@ -22,10 +20,10 @@ public class Ghost {
         this.esp=esp;
         this.agl=agl;
     }
-    public static String getName() {
+    public String getName() {
         return name;
     }
-    public static ImageView getImg() {
+    public int getImg() {
         return img;
     }
     public int getPts(){
