@@ -38,7 +38,6 @@ public class GhostActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         Button user = (Button)findViewById(R.id.user);
-        //Button detail = (Button)findViewById(R.id.detail);
 
         user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,14 +45,6 @@ public class GhostActivity extends AppCompatActivity {
                 startActivity(new Intent(GhostActivity.this, BatterActivity.class));
             }
         });
-/**
-        detail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(GhostActivity.this, DetailActivity.class));
-            }
-        });**/
-    }
 
-    
+    }
 }

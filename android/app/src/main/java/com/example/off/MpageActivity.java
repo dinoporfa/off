@@ -24,7 +24,7 @@ public class MpageActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btn = (Button)findViewById(R.id.detail);
+        Button btn = (Button)findViewById(R.id.data);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
