@@ -5,9 +5,11 @@ signal textbox_closed
 var current_player_hp = 0
 var current_enemy_hp = 0
 
+
+
 @export var enemy: enemy = null:
 	set(value):
-		enemy = value
+		enemy = Manager.get_enemy()
 
 func _ready() -> void:
 	set_health($Player/player_bar, State.hp, State.max_hp)
@@ -32,9 +34,9 @@ func display_text(text):
 
 
 func set_health(progress_bar, hp, max_hp):
-	progress_bar.value=hp
 	progress_bar.max_value=max_hp
-	progress_bar.get_node("Label").text="%d/%d" % [hp/max_hp]
+	progress_bar.value=hp
+	progress_bar.get_node("Label").text="%s / %s" % [hp,max_hp]
 
 func set_enemy_health(progress_bar, hp, max_hp):
 	progress_bar.value=hp

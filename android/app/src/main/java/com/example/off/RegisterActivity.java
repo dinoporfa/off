@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (name.length() == 0 || email.length() == 0 || password.length() == 0 || password.getText() == password2.getText())
                     Toast.makeText(RegisterActivity.this, "Porfavor introduce datos válidos", Toast.LENGTH_SHORT).show();
                 else{
-                    startActivity(new Intent(RegisterActivity.this, GhostActivity.class));
+                    startActivity(new Intent(RegisterActivity.this, MpageActivity.class));
                 }
             }
         });

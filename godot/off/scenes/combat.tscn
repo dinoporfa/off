@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cfqfi7l13bpbw"]
 
-[ext_resource type="Script" path="res://scripts/combat.gd" id="1_2p7ym"]
+[ext_resource type="Script" uid="uid://cqq1fe47mglvm" path="res://scripts/combat.gd" id="1_2p7ym"]
 [ext_resource type="Texture2D" uid="uid://bf2omuh0qsd4v" path="res://asets/18870g3.png" id="1_3q8jl"]
 [ext_resource type="Resource" uid="uid://x5jodxly8mhf" path="res://scripts/enemies/001.tres" id="2_6cbk4"]
 [ext_resource type="Texture2D" uid="uid://cbt7bmq6unjlv" path="res://asets/59520.png" id="2_wphtt"]
@@ -72,9 +72,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4b3os"]
 _data = {
-"RESET": SubResource("Animation_mbrn6"),
-"enemy": SubResource("Animation_colfc"),
-"player_hit": SubResource("Animation_ugbse")
+&"RESET": SubResource("Animation_mbrn6"),
+&"enemy": SubResource("Animation_colfc"),
+&"player_hit": SubResource("Animation_ugbse")
 }
 
 [node name="combat" type="Control"]
@@ -169,7 +169,7 @@ text = "Un fantasma apareceu!"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_4b3os")
+&"": SubResource("AnimationLibrary_4b3os")
 }
 
 [connection signal="value_changed" from="Player/player_bar" to="." method="_on_progress_bar_value_changed"]

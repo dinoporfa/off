@@ -2,7 +2,8 @@ extends Node
 
 var last_position =Vector2(100,100)
 
-@export_dir var enemy_folder
+@export_dir var enemy_folder 
+
 
 var encounter_number : int = 100:
 	set(value):
@@ -16,7 +17,7 @@ func save_player_data(player):
 	last_position = player.position
 
 func get_enemy() ->enemy:
-	var chosen_enemy = "res://scripts/enemies/00" + str(randi_range(0, 2)) + ".tres"
+	var chosen_enemy = load("res://scripts/enemies/00" + str(randi_range(0, 2)) + ".tres") 
 	
 	return chosen_enemy
 

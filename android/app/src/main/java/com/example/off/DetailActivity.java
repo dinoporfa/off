@@ -35,7 +35,7 @@ public class DetailActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             img.setImageResource(bundle.getInt("img"));
-            name.setText(bundle.getInt("name"));
+            name.setText(bundle.getString("name"));
             pts.setText("Pts: " + bundle.getInt("pts"));
             hp.setText("Hp: " + bundle.getInt("hp"));
             atk.setText("Atk: " + bundle.getInt("atk"));

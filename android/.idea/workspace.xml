@@ -2,9 +2,7 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config>
-        <device id="_android_virtual_device_id_Nexus_S_API_28" />
-      </config>
+      <config />
     </shared>
     <layouts>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_batter.xml">
@@ -49,20 +47,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/DetailActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/DetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/DetailActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/MpageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/MpageActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_batter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_batter.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ghost.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ghost.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mpage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mpage.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/combat.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/combat.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/game.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/game_over.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/game_over.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/main_menu.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/main_menu.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/manager.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/manager.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/combat.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/combat.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/000.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/000.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\loisf\.android\avd\Nexus_S_API_28.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Developer\.android\avd\Nexus_7_API_28.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -103,22 +106,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/loisf/OneDrive/Escritorio/recu/off/android&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Android App.app.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/loisf/OneDrive/Escritorio/recu/off/android",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="android.template.-1384293274">
       <recent name="com.example.off" />
@@ -229,12 +232,12 @@
       <map>
         <entry key="com.example.off">
           <value>
-            <CheckInfo lastCheckTimestamp="1748305705519" />
+            <CheckInfo lastCheckTimestamp="1748428688719" />
           </value>
         </entry>
         <entry key="com.example.off.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1748305705518" />
+            <CheckInfo lastCheckTimestamp="1748428688719" />
           </value>
         </entry>
       </map>

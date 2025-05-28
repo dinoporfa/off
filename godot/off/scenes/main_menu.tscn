@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dm2u7iamddox5"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ss00v"]
+[ext_resource type="Script" uid="uid://rgl4vlkotto0" path="res://scripts/main_menu.gd" id="1_ss00v"]
 [ext_resource type="Texture2D" uid="uid://wkch8i8q5mpb" path="res://asets/off-retrospective-8.jpg" id="2_12nlp"]
 
 [node name="MainMenu" type="Control"]

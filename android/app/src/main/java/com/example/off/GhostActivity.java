@@ -34,7 +34,7 @@ public class GhostActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        GhostAdapter adapter = new GhostAdapter(ghostList);
+        GhostAdapter adapter = new GhostAdapter(ghostList, this);
         recyclerView.setAdapter(adapter);
 
         Button user = (Button)findViewById(R.id.user);

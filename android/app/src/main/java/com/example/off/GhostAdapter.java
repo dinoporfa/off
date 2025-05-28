@@ -16,7 +16,8 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.MyViewHolder
     private Context context;
     private List<Ghost> ghostList;
 
-    public GhostAdapter(List<Ghost> ghostList) {
+    public GhostAdapter(List<Ghost> ghostList, Context context) {
+        this.context = context;
         this.ghostList = ghostList;
     }
 
@@ -63,16 +64,11 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.MyViewHolder
         Button detail;
 
         public MyViewHolder(@NonNull View itemView) {
-
             super(itemView);
 
             name = itemView.findViewById(R.id.name);
             img = itemView.findViewById(R.id.img);
             detail = itemView.findViewById(R.id.detail);
-
         }
-
-
-
     }
 }
