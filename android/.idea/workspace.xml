@@ -46,27 +46,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/DetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/DetailActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/RegisterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/combat.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/combat.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/game.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/game.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/game_over.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/game_over.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/main_menu.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/main_menu.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scenes/manager.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scenes/manager.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/combat.gd" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/combat.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/000.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/000.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/001.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" beforeDir="false" afterPath="$PROJECT_DIR$/../godot/off/scripts/enemies/002.tres" afterDir="false" />
-    </list>
+    <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
