@@ -18,7 +18,7 @@ def register(request):
         userPassword = body.get('password')
         user = User(userName = userName, userPassword = userPassword)
         user.save()
-        return JsonResponse({}, status= 201)
+        return JsonResponse({"User register successfully"}, status= 201)
     else:
         return JsonResponse({}, status= 405)
 
@@ -46,7 +46,6 @@ def set_enemies(request):
         ghost.save()
         ghost = Ghost("Queimado crítico", 150, 500, 10, 10, 10, 250)
         ghost.save()
-
-
-    return JsonResponse({"Enemies set successfully"}, status = 200)
-
+        return JsonResponse({"Enemies set successfully"}, status=200)
+    else:
+        return JsonResponse({}, status=400)
