@@ -35,3 +35,8 @@ class Player(models.Model):
             "Hp": Player.hp,
             "Atk": Player.atk
         }
+
+class User(models.Model):
+    userName = models.CharField(max_length=50, unique=True)
+    userPassword = models.CharField(max_length=50)
+    tokenSession = models.CharField(max_length=50, null=True)

@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from SimpleAPI.simplerest11app import endpoints
+from simplerest11app import endpoints
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('health', endpoints.health_check),
-    path('api/enemies', endpoints.set_enemies)
+    path('users', endpoints.register),
+    path('sessions', endpoints.login)
 ]
