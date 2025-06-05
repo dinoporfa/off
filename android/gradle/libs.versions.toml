@@ -1,5 +1,5 @@
 [versions]
-agp = "8.10.0"
+agp = "8.10.1"
 credentials = "<latest version>"
 credentialsPlayServicesAuth = "<latest version>"
 googleid = "<latest version>"
@@ -16,8 +16,10 @@ navigationFragment = "2.6.0"
 navigationUi = "2.6.0"
 navigationRuntime = "2.8.9"
 parseAndroid = "1.10.0"
+retrofit = "2.9.0"
 
 [libraries]
+converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "retrofit" }
 credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "credentialsPlayServicesAuth" }
 credentials = { module = "androidx.credentials:credentials", version.ref = "credentials" }
 googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "googleid" }
@@ -34,6 +36,7 @@ navigation-fragment = { group = "androidx.navigation", name = "navigation-fragme
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigationUi" }
 navigation-runtime = { group = "androidx.navigation", name = "navigation-runtime", version.ref = "navigationRuntime" }
 parse-android = { module = "com.parse:parse-android", version.ref = "parseAndroid" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -46,7 +46,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="" />
+    <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/DetailActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/DetailActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/Ghost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +64,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Developer\.android\avd\Nexus_7_API_28.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\loisf\.android\avd\Nexus_S_API_28.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -88,7 +97,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Android App.app.executor": "Debug",
+    "Android App.app.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -212,12 +221,12 @@
       <map>
         <entry key="com.example.off">
           <value>
-            <CheckInfo lastCheckTimestamp="1748428688719" />
+            <CheckInfo lastCheckTimestamp="1749139540829" />
           </value>
         </entry>
         <entry key="com.example.off.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1748428688719" />
+            <CheckInfo lastCheckTimestamp="1749139540830" />
           </value>
         </entry>
       </map>

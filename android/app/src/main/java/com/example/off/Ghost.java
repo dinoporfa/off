@@ -2,7 +2,7 @@ package com.example.off;
 
 public class Ghost {
     private String name;
-    private int img;
+    private String img;
     private int pts;
     private int hp;
     private int atk;
@@ -10,7 +10,7 @@ public class Ghost {
     private int esp;
     private int agl;
 
-    public Ghost(String name, int img, int pts, int hp, int atk, int def, int esp, int agl){
+    public Ghost(String name, String img, int pts, int hp, int atk, int def, int esp, int agl){
         this.name=name;
         this.img=img;
         this.pts=pts;
@@ -23,7 +23,7 @@ public class Ghost {
     public String getName() {
         return name;
     }
-    public int getImg() {
+    public String getImg() {
         return img;
     }
     public int getPts(){

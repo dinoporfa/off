@@ -1,6 +1,9 @@
 package com.example.off;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +14,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,9 +34,9 @@ public class GhostActivity extends AppCompatActivity {
         });
 
         List<Ghost> ghostList = new ArrayList<>();
-        ghostList.add(new Ghost("Queimado",R.drawable.burnt,100,70,80,70,70,40));
-        ghostList.add(new Ghost("Queimado de calvario",R.drawable.calvary_burnt,250,150,150,85,80,100));
-        ghostList.add(new Ghost("Queimado crítico",R.drawable.critic_burnt,150,500,10,10,10,250));
+        ghostList.add(new Ghost("Queimado","https://static.wikia.nocookie.net/offgame/images/6/6a/Burnt.png",100,70,80,70,70,40));
+        ghostList.add(new Ghost("Queimado de calvario","https://static.wikia.nocookie.net/offgame/images/5/53/Calvary-burnt.png",250,150,150,85,80,100));
+        ghostList.add(new Ghost("Queimado crítico","https://static.wikia.nocookie.net/offgame/images/4/4f/Critic-burnt.png",150,500,10,10,10,250));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -45,6 +51,15 @@ public class GhostActivity extends AppCompatActivity {
                 startActivity(new Intent(GhostActivity.this, BatterActivity.class));
             }
         });
+    }
 
+    public static Bitmap LoadImageFromWeb(String url) {
+        try {
+            InputStream is = (InputStream) new URL(url).getContent();
+            Bitmap image = BitmapFactory.decodeStream(is);
+            return image;
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

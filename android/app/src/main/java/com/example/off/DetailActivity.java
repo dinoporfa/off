@@ -1,6 +1,11 @@
 package com.example.off;
 
+import static com.example.off.GhostActivity.LoadImageFromWeb;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
@@ -24,6 +29,15 @@ public class DetailActivity extends AppCompatActivity {
             return insets;
         });
 
+        Button user = (Button)findViewById(R.id.back);
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailActivity.this, GhostActivity.class));
+            }
+        });
+
         img = findViewById(R.id.dimg);
         name = findViewById(R.id.dname);
         pts = findViewById(R.id.dpts);
@@ -34,7 +48,7 @@ public class DetailActivity extends AppCompatActivity {
         agl = findViewById(R.id.dagl);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
-            img.setImageResource(bundle.getInt("img"));
+            img.setImageBitmap(LoadImageFromWeb(bundle.getString("img")));
             name.setText(bundle.getString("name"));
             pts.setText("Pts: " + bundle.getInt("pts"));
             hp.setText("Hp: " + bundle.getInt("hp"));

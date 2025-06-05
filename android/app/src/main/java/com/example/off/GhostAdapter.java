@@ -1,5 +1,7 @@
 package com.example.off;
 
+import static com.example.off.GhostActivity.LoadImageFromWeb;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -34,7 +36,7 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.MyViewHolder
         Ghost ghost = ghostList.get(position);
 
         holder.name.setText(ghost.getName());
-        holder.img.setImageResource(ghost.getImg());
+        holder.img.setImageBitmap(LoadImageFromWeb(ghost.getImg()));
 
         holder.detail.setOnClickListener(new View.OnClickListener(){
             @Override
