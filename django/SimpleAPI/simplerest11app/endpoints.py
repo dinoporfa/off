@@ -1,4 +1,5 @@
 import json
+from contextlib import nullcontext
 
 from django.http import JsonResponse
 
@@ -18,7 +19,7 @@ def register(request):
         userPassword = body.get('password')
         user = User(userName = userName, userPassword = userPassword)
         user.save()
-        return JsonResponse({"User register successfully"}, status= 201)
+        return JsonResponse({"Success": True}, status= 201)
     else:
         return JsonResponse({}, status= 405)
 
@@ -37,6 +38,24 @@ def login(request):
         return JsonResponse({'token': token}, status = 201)
     else:
         return JsonResponse({}, status= 405)
+
+@csrf_exempt
+def upload_pts(request):
+    t = request.headers.get('token')
+    if t != None:
+        user = User.objects.filter(tokenSession=t).first()
+        if user != None:
+            body = json.loads(request.body)
+            newpts = body.get('pts')
+            if newpts > user.pts:
+                user.pts = newpts
+                return JsonResponse({'pts': 'updated'}, status=200)
+            else:
+                return JsonResponse({}, status=200)
+        else:
+            return JsonResponse({}, status=401)
+    else:
+        return JsonResponse({}, status=401)
 
 def set_enemies(request):
     if request.method == 'POST':
