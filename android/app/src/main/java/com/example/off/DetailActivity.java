@@ -1,7 +1,5 @@
 package com.example.off;
 
-import static com.example.off.GhostActivity.LoadImageFromWeb;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.squareup.picasso.Picasso;
 
 public class DetailActivity extends AppCompatActivity {
     TextView name, pts, hp, atk, def, esp, agl;
@@ -48,7 +47,7 @@ public class DetailActivity extends AppCompatActivity {
         agl = findViewById(R.id.dagl);
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
-            img.setImageBitmap(LoadImageFromWeb(bundle.getString("img")));
+            Picasso.get().load(bundle.getString("img")).into(img);
             name.setText(bundle.getString("name"));
             pts.setText("Pts: " + bundle.getInt("pts"));
             hp.setText("Hp: " + bundle.getInt("hp"));

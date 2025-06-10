@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 JSONObject o = new JSONObject();
                 try {
-                    o.put("username", name);
-                    o.put("password", password);
+                    o.put("username", name.getText());
+                    o.put("password", password.getText());
                 } catch (JSONException e) {
                     throw new RuntimeException(e);
                 }
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Toast.makeText(MainActivity.this, "Sesión iniciada correctamente", Toast.LENGTH_SHORT).show();
-                        //startActivity(new Intent(MainActivity.this, MpageActivity.class));
+                        startActivity(new Intent(MainActivity.this, MpageActivity.class));
                     }
                 }, new Response.ErrorListener() {
                     @Override

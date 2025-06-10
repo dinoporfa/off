@@ -1,7 +1,5 @@
 package com.example.off;
 
-import static com.example.off.GhostActivity.LoadImageFromWeb;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -12,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.MyViewHolder> {
@@ -36,7 +37,7 @@ public class GhostAdapter extends RecyclerView.Adapter<GhostAdapter.MyViewHolder
         Ghost ghost = ghostList.get(position);
 
         holder.name.setText(ghost.getName());
-        holder.img.setImageBitmap(LoadImageFromWeb(ghost.getImg()));
+        Picasso.get().load(ghost.getImg()).into(holder.img);
 
         holder.detail.setOnClickListener(new View.OnClickListener(){
             @Override

@@ -1,9 +1,6 @@
 package com.example.off;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,9 +11,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,15 +45,5 @@ public class GhostActivity extends AppCompatActivity {
                 startActivity(new Intent(GhostActivity.this, BatterActivity.class));
             }
         });
-    }
-
-    public static Bitmap LoadImageFromWeb(String url) {
-        try {
-            InputStream is = (InputStream) new URL(url).getContent();
-            Bitmap image = BitmapFactory.decodeStream(is);
-            return image;
-        } catch (Exception e) {
-            return null;
-        }
     }
 }

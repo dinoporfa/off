@@ -49,13 +49,13 @@ public class RegisterActivity extends AppCompatActivity {
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**if (name.length() == 0 || email.length() == 0 || password.length() == 0 || password.getText() != password2.getText())
+                if (name.getText().length() == 0 || email.getText().length() == 0 || password.getText().length() == 0 || password.getText() != password2.getText())
                     Toast.makeText(RegisterActivity.this, "Porfavor introduce datos válidos", Toast.LENGTH_SHORT).show();
-                else{**/
+                else{
                     JSONObject o = new JSONObject();
                     try {
-                        o.put("username", name);
-                        o.put("password", password);
+                        o.put("username", name.getText());
+                        o.put("password", password.getText());
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
                     }
@@ -72,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
                     queue.add(r);
-                //}
+                }
             }
         });
 
