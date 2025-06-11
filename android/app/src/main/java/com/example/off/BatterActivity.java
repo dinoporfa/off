@@ -27,6 +27,7 @@ public class BatterActivity extends AppCompatActivity {
         });
 
         pts = findViewById(R.id.bpts);
+        pts.setText("High score: " + 0);
 
         Button user = (Button)findViewById(R.id.enemies);
 

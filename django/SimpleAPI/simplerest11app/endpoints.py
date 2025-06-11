@@ -65,3 +65,12 @@ def get_enemies(request):
         return JsonResponse(response, safe=False)
     else:
         return JsonResponse({}, status=405)
+
+def get_pts(request):
+    if request.method == 'GET':
+        body = json.loads(request.body)
+        token = body.get('token')
+        user = User.objects.filter(tokenSession=token).first()
+        return JsonResponse(user.to_json, safe=False)
+    else:
+        return JsonResponse({}, status=405)

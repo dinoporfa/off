@@ -32,6 +32,5 @@ class User(models.Model):
 
     def to_json(self):
         return{
-            "name": User.userName,
             "pts": User.pts
         }

@@ -48,9 +48,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/BatterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/BatterActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../django/.idea/django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../django/.idea/django.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../django/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../django/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django/SimpleAPI/SimpleAPI/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/SimpleAPI/SimpleAPI/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../django/SimpleAPI/simplerest11app/endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/SimpleAPI/simplerest11app/endpoints.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\Developer\.android\avd\Nexus_7_API_28.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\loisf\.android\avd\Nexus_S_API_28.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -217,12 +219,12 @@
       <map>
         <entry key="com.example.off">
           <value>
-            <CheckInfo lastCheckTimestamp="1749538308894" />
+            <CheckInfo lastCheckTimestamp="1749653819804" />
           </value>
         </entry>
         <entry key="com.example.off.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1749538308894" />
+            <CheckInfo lastCheckTimestamp="1749653819803" />
           </value>
         </entry>
       </map>

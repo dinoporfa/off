@@ -24,5 +24,6 @@ urlpatterns = [
     path('users', endpoints.register),
     path('sessions', endpoints.login),
     path('gameover', endpoints.upload_pts),
-    path('enemies', endpoints.get_enemies)
+    path('enemies', endpoints.get_enemies),
+    path('pts', endpoints.get_pts)
 ]
