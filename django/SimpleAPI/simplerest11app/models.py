@@ -11,6 +11,16 @@ class Ghost(models.Model):
     spc = models.IntegerField(default=0)
     agl = models.IntegerField(default=0)
 
+    def to_json(self):
+        return {
+            "name": self.name,
+            "pts": self.pts,
+            "hp": self.hp,
+            "atk": self.atk,
+            "def": self.df,
+            "spc": self.spc,
+            "agl": self.agl
+        }
 
 class User(models.Model):
     userName = models.CharField(max_length=50, unique=True)
@@ -19,3 +29,9 @@ class User(models.Model):
     pts = models.IntegerField(default=0)
     hp = models.IntegerField(default=500)
     atk = models.IntegerField(default=50)
+
+    def to_json(self):
+        return{
+            "name": User.userName,
+            "pts": User.pts
+        }

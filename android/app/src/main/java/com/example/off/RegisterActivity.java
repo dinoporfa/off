@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(JSONObject response) {
                             Toast.makeText(RegisterActivity.this, "Usuario rexistrado correctamente", Toast.LENGTH_SHORT).show();
-                            //startActivity(new Intent(RegisterActivity.this, MpageActivity.class));
+                            startActivity(new Intent(RegisterActivity.this, MpageActivity.class));
                         }
                     }, new Response.ErrorListener() {
                         @Override

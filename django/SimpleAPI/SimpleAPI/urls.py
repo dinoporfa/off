@@ -23,6 +23,6 @@ urlpatterns = [
     path('health', endpoints.health_check),
     path('users', endpoints.register),
     path('sessions', endpoints.login),
-    path('pts', endpoints.upload_pts),
-    path('enemies/set_enemies', endpoints.set_enemies)
+    path('gameover', endpoints.upload_pts),
+    path('enemies', endpoints.get_enemies)
 ]
