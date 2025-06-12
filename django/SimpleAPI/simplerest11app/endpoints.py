@@ -68,9 +68,10 @@ def get_enemies(request):
 
 def get_pts(request):
     if request.method == 'GET':
-        body = json.loads(request.body)
-        token = body.get('token')
+        token = request.headers.get('token')
         user = User.objects.filter(tokenSession=token).first()
-        return JsonResponse(user.to_json, safe=False)
+        if user is None:
+            return JsonResponse({}, status=401)
+        return JsonResponse(user.to_json(), safe=False)
     else:
         return JsonResponse({}, status=405)

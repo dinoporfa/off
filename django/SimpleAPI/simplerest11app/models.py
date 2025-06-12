@@ -4,6 +4,7 @@ from django.db import models
 
 class Ghost(models.Model):
     name = models.CharField(max_length=20, unique=True)
+    img = models.CharField(max_length=80, null=True)
     pts = models.IntegerField(default=0)
     hp = models.IntegerField(default=0)
     atk = models.IntegerField(default=0)
@@ -14,6 +15,7 @@ class Ghost(models.Model):
     def to_json(self):
         return {
             "name": self.name,
+            "img": self.img,
             "pts": self.pts,
             "hp": self.hp,
             "atk": self.atk,
@@ -32,5 +34,5 @@ class User(models.Model):
 
     def to_json(self):
         return{
-            "pts": User.pts
+            "pts": self.pts
         }

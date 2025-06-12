@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         Toast.makeText(MainActivity.this, "Sesión iniciada correctamente", Toast.LENGTH_SHORT).show();
+                        try {
+                            Session.token = response.getString("token");
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
                         startActivity(new Intent(MainActivity.this, MpageActivity.class));
                     }
                 }, new Response.ErrorListener() {
