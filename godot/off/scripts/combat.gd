@@ -4,8 +4,7 @@ signal textbox_closed
 
 var current_player_hp = 0
 var current_enemy_hp = 0
-
-
+var crit_rate = 1
 
 @export var enemy: enemy = null:
 	set(value):
@@ -18,10 +17,25 @@ func _ready() -> void:
 	current_enemy_hp = enemy.hp
 	current_player_hp = State.hp
 	
+	var http_request = HTTPRequest.new()
+	add_child(http_request)
+	http_request.request_completed.connect(self._http_request_completed)
+	var error = http_request.request("http://127.0.0.1:8000/luck")
+	if error != OK:
+		crit_rate = 0
+	
 	$TextPanel.hide()
 	display_text("Un %s apareceu!" %enemy.name)
 	
 	await (textbox_closed)
+
+
+func _http_request_completed(result, response_code, headers, body):
+	var json = JSON.new()
+	json.parse(body.get_string_from_utf8())
+	crit_rate = json.get_data()
+	
+
 
 func _input(event):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -44,15 +58,27 @@ func set_enemy_health(progress_bar, hp, max_hp):
 
 
 func _on_atk_pressed() -> void:
+	var crit
+	if randf_range(0.0, 1.0) < crit_rate:
+		crit = true
+	else:
+		crit = false
+	
 	display_text("Atacaches!")
 	await (textbox_closed)
 	
-	current_enemy_hp = max(0, current_enemy_hp - State.atk)
+	if crit:
+		current_enemy_hp = max(0, current_enemy_hp - State.atk*2)
+	else:
+		current_enemy_hp = max(0, current_enemy_hp - State.atk)
 	set_enemy_health($enemy_bar, current_enemy_hp, enemy.hp)
 	
 	
 	$AnimationPlayer.play("enemy")
-	display_text("Fixeches %d puntos de dano!" % State.atk)
+	if crit:
+		display_text("Fixeches %d puntos de dano!" % (State.atk*2))
+	else:
+		display_text("Fixeches %d puntos de dano!" % State.atk)
 	await (textbox_closed)
 	
 	
