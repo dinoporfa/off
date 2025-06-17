@@ -67,4 +67,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bpuntuaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puntuacións"
+        app:layout_constraintStart_toEndOf="@+id/bimg"
+        app:layout_constraintTop_toBottomOf="@+id/bpts" />
 </androidx.constraintlayout.widget.ConstraintLayout>

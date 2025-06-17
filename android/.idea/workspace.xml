@@ -30,12 +30,22 @@
           <theme>@style/Theme.Off</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_puntuaciones.xml">
+        <config>
+          <theme>@style/Theme.Off</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
         <config>
           <theme>@style/Theme.Off</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/ghost_card.xml">
+        <config>
+          <theme>@style/Theme.Off</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/puntuaciones_card.xml">
         <config>
           <theme>@style/Theme.Off</theme>
         </config>
@@ -47,16 +57,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ee9359-4632-4c75-beb8-d40494fb6218" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/Puntuaciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/PuntuacionesActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/PuntuacionesAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_puntuaciones.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/puntuaciones_card.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/BatterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/BatterActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/GhostActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/.idea/django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../django/.idea/django.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../django/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/SimpleAPI/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../django/SimpleAPI/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/SimpleAPI/simplerest11app/endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/SimpleAPI/simplerest11app/endpoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../django/SimpleAPI/simplerest11app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../django/SimpleAPI/simplerest11app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/off/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/off/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_batter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_batter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +87,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
       </list>
     </option>
   </component>
@@ -106,7 +118,8 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "git-widget-placeholder": "historial-puntuaciones",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/loisf/OneDrive/Escritorio/recu/off/android",
@@ -124,6 +137,9 @@
       <recent name="com.example.off" />
     </key>
     <key name="android.template.-481404976">
+      <recent name="com.example.off" />
+    </key>
+    <key name="android.template.1919868591">
       <recent name="com.example.off" />
     </key>
     <key name="android.template.1280361580">
@@ -222,9 +238,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/off/BatterActivity.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/off/PuntuacionesAdapter.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -234,12 +250,12 @@
       <map>
         <entry key="com.example.off">
           <value>
-            <CheckInfo lastCheckTimestamp="1749653819804" />
+            <CheckInfo lastCheckTimestamp="1750149972306" />
           </value>
         </entry>
         <entry key="com.example.off.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1749653819803" />
+            <CheckInfo lastCheckTimestamp="1750149972305" />
           </value>
         </entry>
       </map>

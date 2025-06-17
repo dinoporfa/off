@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                JSONObject o = new JSONObject();
+                /**JSONObject o = new JSONObject();
                 try {
                     o.put("username", name.getText());
                     o.put("password", password.getText());
@@ -71,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Non se puido iniciar sesión", Toast.LENGTH_SHORT).show();
                     }
                 });
-                queue.add(r);
+                queue.add(r);**/
+                Session.token = "9c572815c9de1f89a2c2d803e5789bf3e3fced10a92df0ff73e8f7a85d7145df";
+                startActivity(new Intent(MainActivity.this, MpageActivity.class));
             }
         });
 
