@@ -1,4 +1,4 @@
-import json
+import json, random
 
 from django.http import JsonResponse
 from .models import Ghost, User
@@ -75,3 +75,6 @@ def get_pts(request):
         return JsonResponse(user.to_json(), safe=False)
     else:
         return JsonResponse({}, status=405)
+
+def luck(request):
+    return JsonResponse({"critical_hit_chance": random.uniform(0,1)})
