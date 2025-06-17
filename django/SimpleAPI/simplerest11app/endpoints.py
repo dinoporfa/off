@@ -1,7 +1,7 @@
 import json
 
 from django.http import JsonResponse
-from .models import Ghost, User
+from .models import Ghost, User, UserPoints
 from django.views.decorators.csrf import csrf_exempt
 import secrets
 
@@ -72,6 +72,24 @@ def get_pts(request):
         user = User.objects.filter(tokenSession=token).first()
         if user is None:
             return JsonResponse({}, status=401)
-        return JsonResponse(user.to_json(), safe=False)
+        most_recent_points = UserPoints.objects.filter(user=user).first() or 0
+        return JsonResponse({"pts": 0})
+    else:
+        return JsonResponse({}, status=405)
+
+
+def get_pts_history(request):
+    if request.method == 'GET':
+        token = request.headers.get('token')
+        user = User.objects.filter(tokenSession=token).first()
+        if user is None:
+            return JsonResponse({}, status=401)
+        response = []
+        for point in UserPoints.objects.filter(user=user):
+            response.append({
+                "pts": point.pts,
+                "date": point.date
+            })
+        return JsonResponse(response, safe=False)
     else:
         return JsonResponse({}, status=405)

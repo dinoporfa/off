@@ -28,11 +28,15 @@ class User(models.Model):
     userName = models.CharField(max_length=50, unique=True)
     userPassword = models.CharField(max_length=50)
     tokenSession = models.CharField(max_length=50, null=True)
-    pts = models.IntegerField(default=0)
     hp = models.IntegerField(default=500)
     atk = models.IntegerField(default=50)
 
     def to_json(self):
         return{
-            "pts": self.pts
+            "userName": self.userName
         }
+
+class UserPoints(models.Model):
+    pts = models.IntegerField()
+    date = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
