@@ -1,7 +1,7 @@
 import json
 
 from django.http import JsonResponse
-from .models import Ghost, User
+from .models import Ghost, User, Points
 from django.views.decorators.csrf import csrf_exempt
 import secrets
 
@@ -45,12 +45,9 @@ def upload_pts(request):
         if user != None:
             body = json.loads(request.body)
             newpts = body.get('pts')
-            if newpts > user.pts:
-                user.pts = newpts
-                user.save()
-                return JsonResponse({'pts': 'updated'}, status=200)
-            else:
-                return JsonResponse({}, status=200)
+            points = Points(pts = newpts, user = user)
+            points.save()
+            return JsonResponse({'pts': 'updated'}, status=200)
         else:
             return JsonResponse({}, status=401)
     else:
@@ -72,6 +69,10 @@ def get_pts(request):
         user = User.objects.filter(tokenSession=token).first()
         if user is None:
             return JsonResponse({}, status=401)
-        return JsonResponse(user.to_json(), safe=False)
+        points = Points.objects.all()
+        response = []
+        for row in points:
+            response.append(row.to_json())
+        return JsonResponse(response, safe=False)
     else:
         return JsonResponse({}, status=405)
