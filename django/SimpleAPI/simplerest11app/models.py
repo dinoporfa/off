@@ -40,3 +40,13 @@ class UserPoints(models.Model):
     pts = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+class FinalGhost (models.Model):
+    name = models.CharField(max_length = 50)
+    difficulty = models.IntegerField()
+
+    def to_json(self):
+        return {
+            "nome": self.name,
+            "dificultade": self.difficulty
+        }

@@ -26,5 +26,7 @@ urlpatterns = [
     path('gameover', endpoints.upload_pts),
     path('enemies', endpoints.get_enemies),
     path('pts', endpoints.get_pts),
-    path('pts/history', endpoints.get_pts_history)
+    path('pts/history', endpoints.get_pts_history),
+    path('finalGhost', endpoints.get_finalGhost),
+    path('users/<id>', endpoints.user_status)
 ]

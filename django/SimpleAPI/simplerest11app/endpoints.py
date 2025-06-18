@@ -1,7 +1,7 @@
 import json
 
 from django.http import JsonResponse
-from .models import Ghost, User, UserPoints
+from .models import Ghost, User, UserPoints, FinalGhost
 from django.views.decorators.csrf import csrf_exempt
 import secrets
 
@@ -93,3 +93,36 @@ def get_pts_history(request):
         return JsonResponse(response, safe=False)
     else:
         return JsonResponse({}, status=405)
+
+def get_finalGhost(request):
+    if request.method == 'GET':
+        finalGhosts = FinalGhost.objects.all()
+        response = []
+        for ghost in finalGhosts:
+            response.append(ghost.to_json())
+        return JsonResponse(response, safe = False)
+    else:
+        return JsonResponse({}, status = 405)
+
+def user_status(request, id):
+    if request.method == 'GET':
+        user = User.objects.filter(id = id).first()
+        if user == None:
+            return JsonResponse({}, status = 404)
+        response = []
+        response.append({
+            "userName": user.userName,
+            "pts": UserPoints.objects.filter(user = user).first().pts,
+            "hp": user.hp,
+            "atk": user.atk,
+            "isLoggedIn": isLoggedIn(user)
+        })
+        return JsonResponse(response, safe = False)
+    else:
+        return JsonResponse({}, status = 405)
+
+def isLoggedIn(user):
+    if user.tokenSession == None:
+        return False
+    else:
+        return True
