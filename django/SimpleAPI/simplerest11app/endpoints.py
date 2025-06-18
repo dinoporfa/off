@@ -1,7 +1,7 @@
 import json
 
 from django.http import JsonResponse
-from .models import Ghost, User, Points
+from .models import Ghost, User, Points, IntentosLoginFallidos
 from django.views.decorators.csrf import csrf_exempt
 import secrets
 
@@ -27,9 +27,16 @@ def login(request):
         body = json.loads(request.body)
         userName = body.get('username')
         userPassword = body.get('password')
-        user = User.objects.filter(userName=userName, userPassword=userPassword).first()
+        user = User.objects.filter(userName=userName).first()
         if user is None:
             return JsonResponse({}, status = 400)
+        loginFailed = IntentosLoginFallidos.objects.filter(user=user).first()
+        if loginFailed.tries >= 10:
+            return JsonResponse({}, status=401)
+        if userPassword != user.userPassword:
+            loginFailed.tries = loginFailed.tries + 1
+            return JsonResponse({}, status=401)
+        loginFailed.tries =0
         token = secrets.token_hex(32)
         user.tokenSession = token
         user.save()
@@ -69,7 +76,7 @@ def get_pts(request):
         user = User.objects.filter(tokenSession=token).first()
         if user is None:
             return JsonResponse({}, status=401)
-        points = Points.objects.all()
+        points = Points.objects.filter(user = user)
         response = []
         for row in points:
             response.append(row.to_json())

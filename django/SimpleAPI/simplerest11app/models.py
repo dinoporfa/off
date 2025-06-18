@@ -1,3 +1,5 @@
+from tkinter.constants import CASCADE
+
 from django.db import models
 
 # Create your models here.
@@ -42,3 +44,7 @@ class Points(models.Model):
             "pts": self.pts,
             "date": self.date
         }
+
+class IntentosLoginFallidos(models.Model):
+    tries = models.IntegerField(default = 0)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
